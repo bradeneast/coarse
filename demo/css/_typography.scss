@@ -1,0 +1,125 @@
+@font-face {
+    font-family: "Recursive";
+    src: url("../Recursive.woff2") format("woff2-variations");
+    font-weight: 300 1000;
+    font-display: swap;
+}
+
+body {
+    font-family: "Recursive", sans-serif;
+    font-variation-settings: "CASL" 0, "MONO" 0;
+    font-size: calc(12px + 0.63vmin);
+    color: var(--g3);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 800;
+
+    &:not(:first-child) {
+        margin-top: 2em;
+        line-height: 1.2;
+        margin-bottom: 0.2em;
+    }
+}
+
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0.4em;
+}
+
+h4,
+h5,
+h6 {
+    font-size: 1.12em;
+    line-height: 1.4;
+    margin-bottom: 0.2em;
+}
+
+h1,
+h2 {
+    line-height: 1;
+}
+
+h1 {
+    font-size: 3em;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 2em;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.3em;
+    padding-bottom: 0.3em;
+    border-bottom: 3px solid var(--g1);
+}
+
+h3 {
+    font-size: 1.2em;
+    line-height: 1.2;
+}
+
+p,
+ul,
+ol,
+blockquote,
+pre {
+    margin-bottom: 1em;
+}
+
+a:not([href]) {
+    display: none;
+}
+
+blockquote {
+    padding-left: 1em;
+    border-left: 3px solid var(--g3);
+    color: var(--g2);
+    font-variation-settings: "CASL" 0, "MONO" 0, "slnt" -15;
+}
+
+pre {
+    padding: 1rem;
+}
+
+code,
+pre {
+    color: var(--g2);
+    font-family: "Recursive", "Consolas", monospace;
+    border-radius: 0.2em;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    overflow-x: auto;
+    line-height: 1.5;
+    tab-size: 4;
+    hyphens: none;
+    font-size: 0.92em;
+    font-variation-settings: "CASL" 0, "MONO" 1;
+    background: var(--g1);
+}
+
+:not(pre) > code {
+    white-space: pre-wrap;
+    padding: 0.2em 0.37em;
+    margin: 0;
+}
+
+ul,
+ol {
+    padding-left: 1em;
+}
+
+li {
+    list-style-type: disc;
+}
+
+strong {
+    font-weight: bold;
+}

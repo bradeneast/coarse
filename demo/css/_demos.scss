@@ -1,0 +1,137 @@
+#one .carousel {
+  --primary: #{nth($colors, 4)};
+  --slide-height: 250px;
+  --slide-width: 350px;
+  max-width: none;
+
+  .coarse-controls {
+    display: grid;
+    place-items: center;
+    padding: 0;
+    border-radius: 50%;
+
+    &::after {
+      line-height: 0;
+    }
+  }
+}
+
+#two .carousel {
+  --primary: linear-gradient(-37deg, #{nth($colors, 4)}, #{nth($colors, 6)});
+  --slide-width: 150px;
+  --slide-height: 400px;
+  background: var(--darkgrey);
+  display: flex;
+  flex-flow: row wrap;
+  max-width: none;
+  padding: 1em;
+
+  &__slides {
+    padding: 2em 0;
+    width: 100%;
+  }
+
+  .coarse-controls {
+    margin: 0;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+    width: auto;
+    height: auto;
+    background-image: none;
+    border-radius: 0 var(--radius) var(--radius) 0;
+
+    &.previous {
+      border-radius: var(--radius) 0 0 var(--radius);
+
+      &::after {
+        font-size: 1.5em;
+        content: "Previous";
+      }
+    }
+
+    &.next::after {
+      font-size: 1.5em;
+      content: "Next";
+    }
+
+    &:hover,
+    &:focus {
+      background-image: var(--primary);
+      background-size: cover;
+    }
+  }
+
+  .coarse-dot-navigation {
+    button {
+      margin: 0;
+      border-radius: 0;
+      transform: scale(1);
+    }
+  }
+
+  .slide {
+    transform: scale(1);
+    background: var(--primary);
+    filter: grayscale(1);
+    opacity: 0.37;
+
+    &.selected {
+      opacity: 1;
+      filter: grayscale(0);
+    }
+
+    &:hover {
+      filter: grayscale(0) hue-rotate(-37deg);
+    }
+  }
+
+  .slide {
+    margin: 0 1em;
+  }
+}
+
+#three .carousel {
+  --primary: #{nth($colors, 4)};
+  --slide-width: 100%;
+  --slide-height: 420px;
+
+  .coarse-controls {
+    height: var(--slide-height);
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .slide {
+    background: var(--primary);
+    user-select: initial;
+    transform: none;
+    border-radius: 0;
+    padding: 0;
+
+    &__content {
+      color: white;
+      width: 100%;
+      background: var(--primary);
+      padding: 2em 4em;
+      opacity: 0;
+      transform: translateY(1em);
+      transition: var(--ease) 0.2s;
+    }
+
+    h3 {
+      font-weight: 800;
+      margin: 0;
+      color: inherit;
+    }
+
+    &.selected {
+      .slide__content {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  }
+}

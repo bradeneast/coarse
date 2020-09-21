@@ -1,0 +1,71 @@
+body {
+    --primary: #{nth($colors, 4)};
+    --softTint: rgba(90, 90, 120, 0.2);
+    --bounce: 0.37s cubic-bezier(0.3, -0.1, 0.1, 1.1);
+    --ease: 0.63s cubic-bezier(0.4, -0.1, 0.1, 1);
+    --radius: 1em;
+    overflow-x: hidden;
+    padding-top: 8em;
+}
+
+section {
+    overflow: visible;
+    padding: 4em 4em 0 4em;
+}
+
+.point,
+.carousel {
+    max-width: $mobile;
+}
+
+.point {
+    margin-bottom: 4em;
+
+    em {
+        color: var(--primary);
+    }
+}
+
+button {
+    background: var(--softTint);
+    border-radius: var(--radius);
+    margin: 0 1em;
+    padding: 0.63em;
+    cursor: pointer;
+    transition: var(--bounce);
+
+    &:hover,
+    &:focus {
+        background: var(--primary);
+    }
+
+    &[disabled] {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+img {
+    min-height: 100%;
+    object-fit: cover;
+}
+
+@import "./carousel";
+@import "./demos";
+
+@media screen and (max-width: 50em) {
+    section,
+    .carousel,
+    .point {
+        margin-left: 0;
+        padding-left: 0;
+        margin-right: 0;
+        padding-right: 0;
+        margin-bottom: 0;
+        padding-bottom: 1em;
+    }
+
+    .point {
+        margin: 0 1em 3em 1em;
+    }
+}

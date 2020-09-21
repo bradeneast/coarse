@@ -1,0 +1,76 @@
+.carousel {
+  color: white;
+  font-weight: 900;
+  overflow: hidden;
+  margin-bottom: 4em;
+
+  &__slides {
+    display: flex;
+    transition: var(--ease);
+  }
+
+  .slide {
+    user-select: none;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    padding: 2em;
+    background: var(--g1);
+    width: var(--slide-width);
+    height: var(--slide-height);
+    border-radius: var(--radius);
+    transition: var(--ease);
+
+    &:hover {
+      background: var(--primary);
+    }
+  }
+
+  .slide,
+  .coarse-dot-navigation button {
+    transform: scale(0.85);
+
+    &.selected {
+      transform: scale(1);
+      background: var(--primary);
+    }
+  }
+
+  .coarse-dot-navigation {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+
+    button {
+      border: none;
+      margin: 0.63em;
+      transition: var(--bounce);
+
+      &:focus {
+        outline-color: var(--primary);
+      }
+    }
+  }
+
+  .coarse-controls {
+    position: absolute;
+    top: calc(var(--slide-height) / 2);
+    transform: translateY(-50%);
+    width: 3em;
+    height: 3em;
+    background-size: 63%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &.next {
+      background-image: url("../right.svg");
+      right: 0;
+    }
+
+    &.previous {
+      background-image: url("../left.svg");
+      left: 0;
+    }
+  }
+}

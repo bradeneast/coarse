@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Coarse.js</title>
+	<link rel="stylesheet" href="/demo/css/main.css">
+	<script type="module" src="./demo/demo.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+	<section id="one">
+
+		<div class="point">
+			<h2>Coarse is <em>functional</em></h2>
+			<p>
+				Coarse has all the features you'd expect (like swiping, wrapping, and dot navigation), without the overhead of a massive carousel library.
+			</p>
+		</div>
+
+		<div class="carousel">
+			<div class="carousel__slides">
+				<div class="slide">1</div>
+				<div class="slide">2</div>
+				<div class="slide">3</div>
+				<div class="slide">4</div>
+				<div class="slide">5</div>
+				<div class="slide">6</div>
+				<div class="slide">7</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="two">
+		<div class="point">
+			<h2>Coarse is <em>tiny</em></h2>
+			<p>
+				While some carousel libraries are extremely robust, they can weigh a lot - some even 60kb+! Coarse is ~1kb minfied and gzipped.
+			</p>
+		</div>
+		<div class="point">
+			<h2>Coarse is <em>style agnostic</em></h2>
+			<p>
+				Components need to match your brand and fit in stylistically. Coarse only ever modifies HTML attributes, so you never have to worry about CSS conflicts.
+			</p>
+		</div>
+
+		<div class="carousel">
+			<div class="carousel__slides">
+				<div class="slide">1</div>
+				<div class="slide selected">2</div>
+				<div class="slide">3</div>
+				<div class="slide">4</div>
+				<div class="slide">5</div>
+				<div class="slide">6</div>
+				<div class="slide">7</div>
+				<div class="slide">8</div>
+				<div class="slide">9</div>
+				<div class="slide">10</div>
+				<div class="slide">11</div>
+				<div class="slide">12</div>
+				<div class="slide">13</div>
+				<div class="slide">14</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="three">
+		<div class="point">
+			<h2>Coarse is <em>speedy</em></h2>
+			<p>
+				Coarse uses event bubbling to minimize the number of event listeners used per carousel, so your DOM won't get bogged down. Carousels are moved using a simple 3D transform, and styles are computed ahead of time.
+			</p>
+		</div>
+
+		<div class="point">
+			<h2>Coarse is <em>accesible</em></h2>
+			<p>
+				Coarse doesn't interrupt focus states or tab order, and controls are given appropriate attributes like <code>title</code>.
+			</p>
+		</div>
+
+		<div class="carousel">
+			<div class="carousel__slides">
+				<div class="slide">
+					<img src="https://picsum.photos/id/77/1080/720" alt="" />
+					<div class="slide__content">
+						<h3>Item 1</h3>
+					</div>
+				</div>
+				<div class="slide">
+					<img src="https://picsum.photos/id/92/1080/720" alt="" />
+					<div class="slide__content">
+						<h3>Item 2</h3>
+					</div>
+				</div>
+				<div class="slide selected">
+					<img src="https://picsum.photos/id/108/1080/720" alt="" />
+					<div class="slide__content">
+						<h3>Item 3</h3>
+					</div>
+				</div>
+				<div class="slide">
+					<img src="https://picsum.photos/id/179/1080/720" alt="" />
+					<div class="slide__content">
+						<h3>Item 4</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</body>
+
+</html>

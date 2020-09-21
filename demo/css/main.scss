@@ -1,0 +1,117 @@
+@import "./variables";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    line-height: inherit;
+    border: none;
+    background: none;
+    list-style-type: none;
+    transition: 0.1s ease;
+}
+
+body {
+    --g0: #{$g0};
+    --g1: #{$g1};
+    --g2: #{$g2};
+    --g3: #{$g3};
+    --tint: #{$tint};
+    --padding: 4vmin;
+    min-height: 100vh;
+    line-height: 1.5;
+    background: var(--g0);
+    padding: var(--padding);
+
+    *:focus {
+        outline: 3px solid currentColor;
+        outline-offset: 3px;
+    }
+}
+
+main {
+    display: grid;
+    gap: calc(var(--padding) * 1.63);
+    grid-template-columns: repeat(auto-fill, minmax(calc(21em + var(--padding)), 1fr));
+}
+
+main,
+.attribution {
+    padding: calc(var(--padding) * 1.63);
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: var(--padding);
+    padding: var(--padding);
+    background: var(--g1);
+    transition-duration: 0.3s;
+
+    @each $color in $colors {
+        &:nth-of-type(#{index($colors, $color)}) {
+            box-shadow: 0.37em 0.37em $color;
+
+            &:hover,
+            &:focus-within {
+                box-shadow: 1em 1em $color;
+            }
+
+            a {
+                color: $color;
+                font-weight: 600;
+            }
+        }
+    }
+
+    &__title,
+    &__title ~ h3 {
+        margin-top: 0 !important;
+        margin-bottom: 0;
+    }
+
+    &__description {
+        margin-top: 0.37em;
+    }
+}
+
+a {
+    color: nth($colors, 1);
+
+    &:hover,
+    &:focus {
+        color: inherit !important;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --g0: #{$g3};
+        --g1: #{$g2};
+        --g2: #{$g1};
+        --g3: #{$g0};
+        --tint: rgba(0, 0, 0, 0.63);
+    }
+}
+
+@media screen and (max-width: #{$mobile}) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        grid-column: 1;
+    }
+}
+
+@import "./typography";
+@import "./forms";
+@import "./coarse";
