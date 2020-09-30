@@ -32,7 +32,7 @@ import Coarse from 'Coarse';
 new Coarse(carouselElement, options);
 ```
 
-After that, there's only styling!
+That's it! It might be helpful to use the [starter stylesheet](./starter.css) initially.
 
 
 ## Options
