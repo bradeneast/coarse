@@ -1,10 +1,10 @@
-.carousel {
+.carousel__wrapper {
   color: white;
   font-weight: 900;
   overflow: hidden;
   margin-bottom: 4em;
 
-  &__slides {
+  .carousel {
     display: flex;
     transition: var(--ease);
   }

@@ -1,6 +1,6 @@
 import Coarse from '../coarse.js';
 
-document.querySelectorAll('.carousel__slides').forEach((carousel, i) => {
+document.querySelectorAll('.carousel').forEach((carousel, i) => {
     let options = {};
     if (i == 0) {
         options.align = 'center';

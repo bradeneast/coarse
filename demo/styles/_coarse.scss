@@ -14,7 +14,7 @@ section {
 }
 
 .point,
-.carousel {
+.carousel__wrapper {
     max-width: $mobile;
 }
 
@@ -55,7 +55,7 @@ img {
 
 @media screen and (max-width: 50em) {
     section,
-    .carousel,
+    .carousel__wrapper,
     .point {
         margin-left: 0;
         padding-left: 0;

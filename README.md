@@ -5,7 +5,9 @@
 
 
 ## How it works
-Coarse uses event bubbling to minimize the number of event listeners used per carousel, so your DOM won't get bogged down. Carousels are moved using a simple 3D transform, and styles are computed ahead of time.
+Coarse uses event bubbling to minimize the number of event listeners used per carousel, so your DOM won't get bogged down.
+
+Coarse also give its buttons accessible titles, and carousels are moved using a 3D transform for smooth performance.
 
 ## Usage
 To make a carousel, you need 2 things:
@@ -28,6 +30,8 @@ import Coarse from 'Coarse';
 new Coarse(carouselElement, options);
 ```
 
+After that, there's only styling!
+
 
 ## Options
 
@@ -35,19 +39,19 @@ new Coarse(carouselElement, options);
 - Type: `boolean`
 - Default: `true`
 
-Tells Coarse whether or not to render right and left navigation buttons in the carousel element.
+Tells Coarse whether or not to render right and left navigation buttons. (These are rendered as a ***sibling*** of the carousel element).
 
 ### options.renderDots
 - Type: `boolean`
 - Default: `true`
 
-Tells Coarse whether or not to render dot navigation buttons in the carousel element.
+Tells Coarse whether or not to render dot navigation buttons in the carousel element (These are rendered as a ***sibling*** of the carousel element).
 
 ### options.selectedClass
 - Type: `string`
 - Default: `selected`
 
-This is the class that gets added on the selected slide, to distinguish it for styling purposes.
+This is the class that gets added on the selected slide and selected dot (if `renderDots` is enabled), to distinguish them for styling purposes.
 
 ### options.swipeSensitivity
 - Type: `number`

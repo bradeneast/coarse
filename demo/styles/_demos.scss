@@ -1,4 +1,4 @@
-#one .carousel {
+#one .carousel__wrapper {
   --primary: #{nth($colors, 4)};
   --slide-height: 250px;
   --slide-width: 350px;
@@ -16,7 +16,7 @@
   }
 }
 
-#two .carousel {
+#two .carousel__wrapper {
   --primary: linear-gradient(-37deg, #{nth($colors, 4)}, #{nth($colors, 6)});
   --slide-width: 150px;
   --slide-height: 400px;
@@ -26,7 +26,7 @@
   max-width: none;
   padding: 1em;
 
-  &__slides {
+  .carousel {
     padding: 2em 0;
     width: 100%;
   }
@@ -93,7 +93,7 @@
   }
 }
 
-#three .carousel {
+#three .carousel__wrapper {
   --primary: #{nth($colors, 4)};
   --slide-width: 100%;
   --slide-height: 420px;
