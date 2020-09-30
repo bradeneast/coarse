@@ -9,6 +9,8 @@ Coarse uses event bubbling to minimize the number of event listeners used per ca
 
 Coarse also give its buttons accessible titles, and carousels are moved using a 3D transform for smooth performance.
 
+While some carousel libraries are extremely robust, they can weigh a lot - some even 60kb+! Coarse is ~1kb minfied and gzipped.
+
 ## Usage
 To make a carousel, you need 2 things:
 1. An HTML element (the carousel)
