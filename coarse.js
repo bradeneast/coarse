@@ -4,9 +4,8 @@ export default class Coarse {
         {
             renderControls = true,
             renderDots = true,
-            hookAttribute = 'data-coarse',
             selectedClass = 'selected',
-            swipeSensitivity = .1,
+            swipeSensitivity = .2,
             align = 'center',
             wrap = true,
         } = {}) {
@@ -16,6 +15,7 @@ export default class Coarse {
         // Variables
         let next = 'next';
         let previous = 'previous';
+        let hookAttribute = 'data-coarse';
         let controls = 'coarse-controls';
         let selectNext = `.${controls}.${next}`;
         let selectPrevious = `.${controls}.${previous}`;
