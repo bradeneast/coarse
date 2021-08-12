@@ -20,9 +20,9 @@ Once you create a new instance of Coarse, it will automatically start listening 
 
 ```html
 <div class="carousel">
-	<div>1</div>
-	<div>2</div>
-	<div>3</div>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
 </div>
 ```
 ```javascript
